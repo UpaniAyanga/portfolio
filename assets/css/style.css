@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to right, #fccb90, #ff98e2);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hero {
+    padding: 100px 20px;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+.name {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero::before {
+    top: 60%;
+    left: 10%;
+}
+
+.hero::after {
+    top: 80%;
+    right: 10%;
+}
+
+
+.hero {
+    padding: 100px 20px;
+    position: relative; /* Needed for positioning flowers */
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+.name {
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Flower Styles */
+.flower {
+    position: absolute;
+    animation: rotate 8s infinite linear;
+    opacity: 0.8;
+}
+
+.flower-large {
+    width: 100px;
+    top: 60%;
+    left: 22%;
+}
+
+.flower-small {
+    width: 100px;
+    top: 15%;
+    right: 25%;
+}
+
+/* Rotate animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
