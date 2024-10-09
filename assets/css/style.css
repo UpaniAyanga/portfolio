@@ -1,9 +1,11 @@
+/* Global Reset to remove default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling: setting the font, background, color, and centering content */
 body {
     font-family: 'Raleway', sans-serif;
     background: linear-gradient(to right, #fccb90, #ff98e2);
@@ -15,6 +17,7 @@ body {
     justify-content: center;
 }
 
+/* Header styling: making the header fixed to the top and stretching full width */
 header {
     position: absolute;
     top: 0;
@@ -22,89 +25,67 @@ header {
     padding: 20px 0;
 }
 
+/* Navigation: flexbox to center items horizontally, removing bullet points */
 nav ul {
+    margin-top: 5px;
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 70px; /* Spacing between nav items */
 }
 
+/* Navigation links: styling text with no underline, bold font, and white color */
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+    position: relative; /* For adding underline effect on hover */
 }
 
+/* Hover effect: adding a small underline using ::after pseudo-element */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease; /* Smooth transition for underline */
+}
+
+/* Expanding underline on hover */
+nav ul li a:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+/* Hero section styling: adding padding and positioning for future elements */
 .hero {
     padding: 100px 20px;
+    position: relative; /* Needed for positioning decorative flowers */
 }
 
+/* Main title (h1) styling: large font size for hero title */
 h1 {
     font-size: 4rem;
     line-height: 1.2;
 }
 
-.name {
-    font-size: 5rem;
-    font-weight: bold;
-    color: white;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    margin-top: 20px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 30px;
-    border: 2px solid white;
-    border-radius: 30px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.hero::before {
-    top: 60%;
-    left: 10%;
-}
-
-.hero::after {
-    top: 80%;
-    right: 10%;
-}
-
-
-.hero {
-    padding: 100px 20px;
-    position: relative; /* Needed for positioning flowers */
-}
-
-h1 {
-    font-size: 4rem;
-    line-height: 1.2;
-}
-
+/* Special class for the main name text with bold, larger font */
 .name {
     font-size: 90px;
     font-weight: bold;
     color: white;
 }
 
+/* Subtitle under the main title */
 .subtitle {
     font-size: 20px;
     margin-top: 20px;
 }
 
+/* Button styling with border, padding, and hover effect */
 .btn {
     display: inline-block;
     margin-top: 30px;
@@ -115,33 +96,36 @@ h1 {
     color: white;
     font-weight: bold;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
+/* Button hover effect: background becomes slightly opaque */
 .btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Flower Styles */
+/* Decorative Flower Styles: rotating animations and slight opacity */
 .flower {
     position: absolute;
-    animation: rotate 8s infinite linear;
+    animation: rotate 8s infinite linear; /* Infinite spinning animation */
     opacity: 0.8;
 }
 
+/* Larger flower positioning */
 .flower-large {
     width: 100px;
     top: 60%;
     left: 22%;
 }
 
+/* Smaller flower positioning */
 .flower-small {
     width: 100px;
     top: 15%;
     right: 25%;
 }
 
-/* Rotate animation */
+/* Rotate animation for the flowers */
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
