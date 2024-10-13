@@ -17,7 +17,11 @@ body {
     justify-content: center;
 }
 
-/* Header styling: making the header fixed to the top and stretching full width */
+body.about {
+    background: #ff98e2;
+}
+
+/* Header */
 header {
     position: absolute;
     top: 0;
@@ -123,6 +127,65 @@ h1 {
     width: 100px;
     top: 15%;
     right: 25%;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    animation: slideIn 1.5s ease-in-out; /* Animation */
+}
+
+/* Text Section */
+.text-section {
+    padding: 20px;
+    margin-left: 100px;
+    animation: fadeInText 2s ease-in-out; /* Animation */
+}
+
+.text-section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* List Styling */
+.bio-list {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 500px;
+    list-style: none;
+    padding: 0;
+    margin-left: 60px;
+}
+
+.bio-list li {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.bio-list li::before {
+    content: '📍'; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+}
+
+/* Profile Image */
+.profile-image img {
+    justify-content: center;
+    width: 50%;
+    margin-right: 250px;
+
 }
 
 /* Rotate animation for the flowers */
