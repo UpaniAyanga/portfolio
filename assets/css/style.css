@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 14px;
+}
+
 /* Body styling: setting the font, background, color, and centering content */
 body {
     font-family: 'Raleway', sans-serif;
