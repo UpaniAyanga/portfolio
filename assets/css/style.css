@@ -12,8 +12,7 @@ html {
 /* Body styling: setting the font, background, color, and centering content */
 body {
     font-family: 'Raleway', sans-serif;
-    background: linear-gradient(to right, #fccb90, #ff98e2);
-    color: white;
+    background: linear-gradient(to right, #fc5daa, #ff98e2);
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -21,37 +20,50 @@ body {
     justify-content: center;
 }
 
-body.about {
-    background: #ff98e2;
-}
-
-/* Header */
+/* Basic styling */
 header {
     position: absolute;
     top: 0;
     width: 100%;
     padding: 20px 0;
+    background-color: #aa2e91; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 20px; 
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Pacifico', cursive; /* Changed font to a more logo-like style */
+    letter-spacing: 3px; /* Added letter spacing for a more distinct look */
 }
 
 /* Navigation: flexbox to center items horizontally, removing bullet points */
 nav ul {
-    margin-top: 5px;
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 70px; /* Spacing between nav items */
+    margin-top: 5px;
 }
 
-/* Navigation links: styling text with no underline, bold font, and white color */
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    position: relative; /* For adding underline effect on hover */
+    position: relative;
 }
 
-/* Hover effect: adding a small underline using ::after pseudo-element */
 nav ul li a::after {
     content: '';
     position: absolute;
@@ -60,24 +72,81 @@ nav ul li a::after {
     background-color: white;
     bottom: -5px;
     left: 0;
-    transition: width 0.3s ease; /* Smooth transition for underline */
+    transition: width 0.3s ease;
 }
 
-/* Expanding underline on hover */
+/* Hover effect */
 nav ul li a:hover::after {
-    width: 100%; /* Full width underline on hover */
+    width: 100%;
 }
 
-/* Hero section styling: adding padding and positioning for future elements */
-.hero {
-    padding: 100px 20px;
-    position: relative; /* Needed for positioning decorative flowers */
+/* Active link */
+nav ul li a.active {
+    color: #ffcc00; /* Highlight the active link */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 780px) {
+    nav ul {
+        display: none; /* Hide menu initially on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 50px;
+        border-radius: 10px;
+        background-color: #e14cc3;
+        opacity: 0.9;
+        transition: all 0.3s ease; /* Add transition for smooth opening */
+    }
+
+    nav ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu on small screens */
+    }
+}
+
+/* Subtitle under the main title */
+.subtitle {
+    font-size: 20px;
+    margin-top: 20px;
+    color: white;
 }
 
 /* Main title (h1) styling: large font size for hero title */
 h1 {
     font-size: 4rem;
     line-height: 1.2;
+    color: #581a58;
 }
 
 /* Special class for the main name text with bold, larger font */
@@ -87,10 +156,39 @@ h1 {
     color: white;
 }
 
+/* Styling for the aspiring text */
+.aspiring {
+    font-size: 2rem; /* Adjust size as needed */
+    color: white;
+    margin: 20px 0; /* Margin for spacing */
+}
+
 /* Subtitle under the main title */
 .subtitle {
     font-size: 20px;
     margin-top: 20px;
+    color: white;
+}
+
+/* Main title (h1) styling: large font size for hero title */
+h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    color: #581a58;
+}
+
+/* Special class for the main name text with bold, larger font */
+.name {
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Styling for the aspiring text */
+.aspiring {
+    font-size: 2rem; /* Adjust size as needed */
+    color: white;
+    margin: 20px 0; /* Margin for spacing */
 }
 
 /* Button styling with border, padding, and hover effect */
@@ -112,145 +210,139 @@ h1 {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Decorative Flower Styles: rotating animations and slight opacity */
-.flower {
-    position: absolute;
-    animation: rotate 8s infinite linear; /* Infinite spinning animation */
-    opacity: 0.8;
-}
-
-/* Larger flower positioning */
-.flower-large {
-    width: 100px;
-    top: 60%;
-    left: 22%;
-}
-
-/* Smaller flower positioning */
-.flower-small {
-    width: 100px;
-    top: 15%;
-    right: 25%;
-}
-
-/* Container Styling */
-.container {
+/* Hero section styling: flexbox for text and image alignment */
+.hero {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    animation: slideIn 1.5s ease-in-out; /* Animation */
-}
-
-/* Text Section */
-.text-section {
-    padding: 20px;
-    margin-left: 100px;
-    animation: fadeInText 2s ease-in-out; /* Animation */
-}
-
-.text-section h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 4rem;
-    color: white;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-/* List Styling */
-.bio-list {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.2rem;
-    color: #333;
-    line-height: 1.6;
-    max-width: 500px;
-    list-style: none;
-    padding: 0;
-    margin-left: 60px;
-}
-
-.bio-list li {
-    position: relative;
-    padding-left: 60px;
-    margin-bottom: 20px;
-    color: rgb(0, 0, 0);
-}
-
-.bio-list li::before {
-    content: '📍'; 
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.5rem;
+    align-items: center; /* Center vertically */
+    padding: 50px;
+    margin-left: 150px;
+    margin-top: 50px;
+    
 }
 
 /* Profile Image */
-.profile-image img {
-    justify-content: center;
-    width: 50%;
-    margin-right: 250px;
-
+.hero-img {
+    border-radius: 50%;
+    margin-left: 110px;
+    width: 450px; 
+    height: 450px;
 }
 
-/* Rotate animation for the flowers */
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
+/* Animated Text Styles */
+.animated-text {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px; 
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInOut 6s linear infinite;
+    position: absolute;
+    color: rgb(180, 16, 180);
+    text-shadow: #1e1a1c;
+}
+
+.fade-in:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.fade-in:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.fade-in:nth-child(3) {
+    animation-delay: 4s;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@media (max-width:720px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        margin-left: 0;
+        padding: 30px;
     }
-    100% {
-        transform: rotate(360deg);
+
+    .hero-img {
+        width: 300px;
+        height: 300px;
+        margin: 20px 0; /* Add margin to separate image from text */
+        order: 2; /* Position the image between the title and the rest of the text */
+    }
+
+    h1 {
+        order: 1; /* Main title appears first */
+        font-size: 2.5rem;
+    }
+
+    .aspiring {
+        order: 3; /* Aspiring text appears after the image */
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+        order: 4; /* Button at the bottom */
     }
 }
 
+/* Footer Section */
+.footer {
+    text-align: center;
+}
 
-.footer{
-    text-align:center;
-    }
-    
-    .footer .row{
-    width:100%;
+.footer .row {
+    width: 100%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
 
-    padding:0.6% 0%;
-    color:gray;
-    font-size:0.8em;
-    }
-    
-    .footer .row a{
-    text-decoration:none;
-    color:gray;
-    transition:0.5s;
-    }
-    
-    .footer .row a:hover{
-    color:#fff;
-    }
-    
-    .footer .row ul{
-    width:100%;
-    }
-    
-    .footer .row ul li{
-    display:inline-block;
-    margin:0px 30px;
-    }
-    
-    .footer .row a i{
-    font-size:2em;
-    margin:0% 1%;
-    }
-    
-    @media (max-width:720px){
-    .footer{
-    text-align:left;
-    padding:5%;
-    }
-    .footer .row ul li{
-    display:block;
-    margin:10px 0px;
-    text-align:left;
-    }
-    .footer .row a i{
-    margin:0% 3%;
-    }
-    }
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
 
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width: 720px) {
+    .footer {
+        text-align: center;
+        padding: 5%;
+    }
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+    .footer .row a i {
+        margin: 0% 3%;
+    }
+}
+/* Footer Section */

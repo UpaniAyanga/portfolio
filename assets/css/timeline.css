@@ -3,15 +3,18 @@
 }
 
 body {
-    background: #f6f9fc;
-    font-family: "Open Sans", sans-serif;
-    color: #525f7f;
+    background: linear-gradient(to right, #f18abd, #ff98e2) !important;
 }
+
 h2 {
     margin: 5%;
     text-align: center;
     font-size: 2rem;
     font-weight: 100;
+}
+
+.container-timeline {
+    padding: 70px;
 }
 .timeline {
     display: flex;

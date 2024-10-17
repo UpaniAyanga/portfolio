@@ -10,18 +10,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body class="about">
-   <!-- Header -->
+   <!-- The header of the portfolio webpage -->
    <header>
+    <div class="container">
+        <!-- Logo -->
+        <a href="index.html" class="logo"> ๋࣭ ⭑ Upani ༘ ⋆₊ </a> 
         <nav>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Career</a></li>
+                <li><a href="../index.html" >About</a></li>
+                <li><a href="timeline.html" class="active">Timeline</a></li>
                 <li><a href="#">Blogs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
-    <div class="container">
+        <div class="hamburger" onclick="toggleMenu()"> <!-- Hamburger Menu -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+<!-- closing the header of the portfolio webpage -->
+    <div class="container-timeline">
         <div class="timeline"> 
           <div class="timeline-event  animated fadeInUp delay-3s timeline-event--type1">
             <div class="timeline-event-icon ">

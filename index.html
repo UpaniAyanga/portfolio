@@ -9,62 +9,77 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <div class="ripple-background">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle mediun shade4"></div>
+        <div class="circle small shade5"></div>
+    </div>
+
     <!-- The header of the portfolio webpage -->
     <header>
-        <!-- contains a navigation bar with links to different sections of the site: -->
-        <nav>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Career</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <!-- Logo -->
+            <a href="index.html" class="logo"> ๋࣭ ⭑ Upani ༘ ⋆₊ </a> 
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">About</a></li>
+                    <li><a href="pages/timeline.html">Timeline</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()"> <!-- Hamburger Menu -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
     <!-- closing the header of the portfolio webpage -->
-     
-    <section class="hero">
-        <h1>Hi, I'm <br><span class="name">Upani Ayanga</span></h1>
-        <p class="subtitle">A software developer based in Srilanka</p>
-        <a href="pages/about.html" class="btn">Learn More About Me</a>
 
-        <!-- Flowers -->
-        <img src="../assets/images/flowers.png" alt="Flower" class="flower flower-large">
-        <img src="../assets/images/flowers.png" alt="Flower" class="flower flower-small">
+    <section class="hero">
+        <div class="hero-content">
+            <div class="text-container">
+                <h1>Hi, I'm <br><span class="name">Upani Ayanga</span></h1>
+                
+                <div class="text aspiring">An aspiring 
+                    <div class="animated-text">
+                    <span class="fade-in">Web Developer</span>
+                    <span class="fade-in">Tech Enthusiast</span>
+                    <span class="fade-in">Blogger</span>
+                </div>
+            </div>
+            <br>
+                <p class="subtitle">Based in Sri Lanka</p>
+                <a href="pages/timeline.html" class="btn">Learn More About Me</a>
+            </div>
+        </div>
+        <img src="assets/images/profile.png" alt="hero" class="hero-img">
     </section>
 
-    <!-- Main Content -->
-    <div class="container">
-        <section class="text-section">
-            <h1>Who Am I?</h1>
-            <ul class="bio-list">
-                <li>Specialized in web development with a passion for creating intuitive user experiences.</li>
-                <li>Over 2 years of experience in front-end and back-end development.</li>
-                <li>Skilled in HTML, CSS, JavaScript, and PHP, with a deep understanding of Laravel and Vue.js.</li>
-                <li>Strong communicator and team collaborator with a background in project management.</li>
-            </ul>
-        </section>
-        <div class="profile-image">
-            <img src="../assets/images/profileImage.png" alt="Profile Image">
-        </div>
-    </div>
-    
     <!-- Footer Section Start-->
     <footer>
         <div class="footer">
-        <div class="row">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+            <div class="row">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="row">
+                Copyrights - All rights reserved || By: Upani Lokusuriya 
+            </div>
         </div>
-        
-        <div class="row">
-        Copyrights - All rights reserved || By: Upani Lokusuriya 
-        </div>
-        </div>
-        </footer>
-    <!-- Footer Section End-->
-
+    </footer>
+    <!-- Footer Section End -->
 </body>
 </html>
+
+<script>
+function toggleMenu() {
+    const nav = document.querySelector('nav ul');
+    nav.classList.toggle('active');
+}
+</script>
