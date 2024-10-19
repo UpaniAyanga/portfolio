@@ -75,6 +75,10 @@ body{
     .contact-inputs {
         width: 80vw;
     }
+    .contact-container{
+        padding-top: 75px;
+    }
+
     .contact-right{
         display: none;
     }

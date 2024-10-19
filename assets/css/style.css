@@ -38,21 +38,22 @@ header {
     padding: 0 20px;
 }
 
+/* Logo styles */
 .logo {
     color: white;
     font-size: 20px; 
     font-weight: bold;
     text-decoration: none;
-    font-family: 'Pacifico', cursive; /* Changed font to a more logo-like style */
-    letter-spacing: 3px; /* Added letter spacing for a more distinct look */
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
 }
 
-/* Navigation: flexbox to center items horizontally, removing bullet points */
+/* Navigation styles */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 70px; /* Spacing between nav items */
+    gap: 70px; 
     margin-top: 5px;
 }
 
@@ -82,7 +83,7 @@ nav ul li a:hover::after {
 
 /* Active link */
 nav ul li a.active {
-    color: #ffcc00; /* Highlight the active link */
+    color: #ffcc00;
 }
 
 /* Hamburger Menu */
@@ -102,9 +103,15 @@ nav ul li a.active {
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 10px; /* Reduce padding on smaller screens */
+    }
+}
+
 @media (max-width: 780px) {
     nav ul {
-        display: none; /* Hide menu initially on small screens */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -114,11 +121,11 @@ nav ul li a.active {
         border-radius: 10px;
         background-color: #e14cc3;
         opacity: 0.9;
-        transition: all 0.3s ease; /* Add transition for smooth opening */
+        transition: all 0.3s ease; 
     }
 
     nav ul.active {
-        display: flex; /* Show the menu when active */
+        display: flex; 
     }
 
     nav ul li {
@@ -126,12 +133,8 @@ nav ul li a.active {
         text-align: center;
     }
 
-    nav ul.active {
-        display: flex; /* Show the menu when active */
-    }
-
     .hamburger {
-        display: flex; /* Show hamburger menu on small screens */
+        display: flex; 
     }
 }
 
@@ -142,14 +145,14 @@ nav ul li a.active {
     color: white;
 }
 
-/* Main title (h1) styling: large font size for hero title */
+/* Main title (h1) styling */
 h1 {
     font-size: 4rem;
     line-height: 1.2;
     color: #581a58;
 }
 
-/* Special class for the main name text with bold, larger font */
+/* Special class for the main name text */
 .name {
     font-size: 90px;
     font-weight: bold;
@@ -158,40 +161,12 @@ h1 {
 
 /* Styling for the aspiring text */
 .aspiring {
-    font-size: 2rem; /* Adjust size as needed */
+    font-size: 2rem; 
     color: white;
-    margin: 20px 0; /* Margin for spacing */
+    margin: 20px 0; 
 }
 
-/* Subtitle under the main title */
-.subtitle {
-    font-size: 20px;
-    margin-top: 20px;
-    color: white;
-}
-
-/* Main title (h1) styling: large font size for hero title */
-h1 {
-    font-size: 4rem;
-    line-height: 1.2;
-    color: #581a58;
-}
-
-/* Special class for the main name text with bold, larger font */
-.name {
-    font-size: 90px;
-    font-weight: bold;
-    color: white;
-}
-
-/* Styling for the aspiring text */
-.aspiring {
-    font-size: 2rem; /* Adjust size as needed */
-    color: white;
-    margin: 20px 0; /* Margin for spacing */
-}
-
-/* Button styling with border, padding, and hover effect */
+/* Button styling */
 .btn {
     display: inline-block;
     margin-top: 30px;
@@ -202,22 +177,20 @@ h1 {
     color: white;
     font-weight: bold;
     font-size: 1rem;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s; 
 }
 
-/* Button hover effect: background becomes slightly opaque */
 .btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Hero section styling: flexbox for text and image alignment */
+/* Hero section styling */
 .hero {
     display: flex;
-    align-items: center; /* Center vertically */
+    align-items: center; 
     padding: 50px;
     margin-left: 150px;
     margin-top: 50px;
-    
 }
 
 /* Profile Image */
@@ -263,7 +236,7 @@ h1 {
     100% { opacity: 0; }
 }
 
-@media (max-width:720px) {
+@media (max-width: 720px) {
     .hero {
         flex-direction: column;
         text-align: center;
@@ -274,24 +247,24 @@ h1 {
     .hero-img {
         width: 300px;
         height: 300px;
-        margin: 20px 0; /* Add margin to separate image from text */
-        order: 2; /* Position the image between the title and the rest of the text */
+        margin: 20px 0; 
+        order: 2; 
     }
 
     h1 {
-        order: 1; /* Main title appears first */
+        order: 1; 
         font-size: 2.5rem;
     }
 
     .aspiring {
-        order: 3; /* Aspiring text appears after the image */
+        order: 3; 
         font-size: 1.3rem;
     }
 
     .btn {
         padding: 8px 20px;
         font-size: 0.9rem;
-        order: 4; /* Button at the bottom */
+        order: 4; 
     }
 }
 
@@ -304,12 +277,11 @@ h1 {
     width: 100%;
     padding: 0.6% 0%;
     color: gray;
-    font-size: 0.8em;
+    font-size: 12px;
 }
 
 .footer .row a {
     text-decoration: none;
-    color: gray;
     transition: 0.5s;
 }
 
@@ -345,4 +317,59 @@ h1 {
         margin: 0% 3%;
     }
 }
+
+@media (min-width: 721px) and (max-width: 1200px) {
+    h1 {
+        font-size: 3rem; /* Adjust for medium screens */
+    }
+
+    .name {
+        font-size: 70px; /* Adjust for medium screens */
+    }
+
+    .aspiring {
+        font-size: 1.5rem; /* Adjust for medium screens */
+    }
+
+    .btn {
+        padding: 10px 25px; /* Adjust button padding */
+    }
+
+    .hero-img {
+        width: 400px; /* Adjust image size */
+        height: 400px; 
+    }
+}
+
+@media (min-width: 1920px) {
+    .hero {
+        margin-left: 400px; /* Standard margin for large screens */
+    }
+    h1 {
+        font-size: 4rem; /* Standard size for large screens */
+    }
+
+    .name {
+        font-size: 90px; /* Standard size for large screens */
+    }
+
+    .aspiring {
+        font-size: 2rem; /* Standard size for large screens */
+    }
+
+    .btn {
+        padding: 10px 30px; /* Standard button padding */
+    }
+
+    .hero-img {
+        width: 450px; /* Standard image size */
+        height: 450px; 
+    }
+}
+
+.facebook { color: #3b5998; }
+.instagram { color: #e1306c; }
+.linkedin { color: #0077b5; }
+.twitter { color: #1da1f2; }
+
 /* Footer Section */
