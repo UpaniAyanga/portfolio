@@ -16,8 +16,8 @@ body {
     text-align: center;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
 }
 
 /* Basic styling */
@@ -191,6 +191,7 @@ h1 {
     padding: 50px;
     margin-left: 150px;
     margin-top: 50px;
+    /* justify-content: center; */
 }
 
 /* Profile Image */

@@ -2,33 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <!-- Swiper CSS for slider functionality -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 </head>
 <body>
+    <!-- The header of the portfolio webpage -->
     <header>
-        <h1>My Blog</h1>
+        <div class="container">
+            <!-- Logo -->
+            <a href="index.html" class="logo"> ๋࣭ ⭑ Upani ༘ ⋆₊ </a> 
+            <!-- Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="timeline.html" class="active">Timeline</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Hamburger Menu for mobile view -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
 
-    <section class="blog-content">
-        <article>
-            <h2>Blog Post 1</h2>
-            <p>This is the first blog post. It's about web development trends in 2024.</p>
-            <time datetime="2024-10-06">October 6, 2024</time>
-        </article>
-
-        <article>
-            <h2>Blog Post 2</h2>
-            <p>This is the second blog post. It focuses on tips for mastering HTML and CSS.</p>
-            <time datetime="2024-09-20">September 20, 2024</time>
-        </article>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
-    </footer>
+    <!-- Main content container -->
+    <div class="container swiper">
+        <!-- Slider wrapper -->
+        <div class="slider-wrap">
+            <!-- List of blog cards -->
+            <div class="card-list swiper-wrapper">
+                <!-- Blog card 1 -->
+                <div class="card swiper-slide">
+                    <img src="../assets/images/blogOneImage.png" alt="" class="blog-image">
+                    <h2 class="blog-name">Improve Your Thinking</h2>
+                    <p class="blog-description">Discover techniques and strategies to enhance your cognitive abilities and critical thinking skills, enabling you to make better decisions and solve problems more effectively.</p>
+                    <button class="read-more">Read More</button>
+                </div>
+                <!-- Blog card 2 -->
+                <div class="card swiper-slide">
+                    <img src="../assets/images/blogTwoImage.png" alt="" class="blog-image">
+                    <h2 class="blog-name">Agile Foundations</h2>
+                    <p class="blog-description"> Learn the core principles and practices of Agile methodology, and understand how to implement Agile frameworks to improve team collaboration and management.</p>
+                    <button class="read-more">Read More</button>
+                </div>
+                <!-- Blog card 3 -->
+                <div class="card swiper-slide">
+                    <img src="../assets/images/blogThreeImage.png" alt="" class="blog-image">
+                    <h2 class="blog-name">Problem Solving in Code</h2>
+                    <p class="blog-description">Explore various problem-solving approaches and coding techniques that can help you tackle complex programming challenges and write efficient, maintainable code.</p>
+                    <button class="read-more">Read More</button>
+                </div>
+                <!-- Blog card 4 -->
+                <div class="card swiper-slide">
+                    <img src="../assets/images/blogFourImage.png" alt="" class="blog-image">
+                    <h2 class="blog-name">Stop Procastination</h2>
+                    <p class="blog-description">Gain insights into the study of procrastination and uncover practical tips and methods to overcome, boost productivity, and achieve your goals.</p>
+                    <button class="read-more">Read More</button>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+        </div>   
+    </div>
 </body>
 </html>
+
+<!-- Swiper JS for slider functionality -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="blog.js"></script>
