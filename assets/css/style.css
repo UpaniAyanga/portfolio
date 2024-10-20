@@ -12,7 +12,7 @@ html {
 /* Body styling: setting the font, background, color, and centering content */
 body {
     font-family: 'Raleway', sans-serif;
-    background: linear-gradient(to right, #fc5daa, #ff98e2);
+    background: linear-gradient(to right, #fe94c8, #ff98e2);
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -105,7 +105,7 @@ nav ul li a.active {
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .container {
-        padding: 0 10px; /* Reduce padding on smaller screens */
+        padding: 0 10px;
     }
 }
 
