@@ -14,22 +14,19 @@
     
 </head>
 <body>
-    <!-- The header of the portfolio webpage -->
     <header>
         <div class="container">
             <!-- Logo -->
-            <a href="index.html" class="logo"> ๋࣭ ⭑ Upani ༘ ⋆₊ </a> 
-            <!-- Navigation Menu -->
+            <a href="../index.html" class="logo"> ๋࣭ ⭑ Upani ༘ ⋆₊ </a> 
             <nav>
                 <ul>
                     <li><a href="../index.html">About</a></li>
-                    <li><a href="timeline.html" class="active">Timeline</a></li>
-                    <li><a href="#">Blogs</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="blog.html" class="active">Blogs</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <!-- Hamburger Menu for mobile view -->
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger" onclick="toggleMenu()"> <!-- Hamburger Menu -->
                 <span></span>
                 <span></span>
                 <span></span>
@@ -314,14 +311,15 @@
             </div>
         </div> 
     </div>
-    
-    
-    
-    
 </body>
-
 </html>
 
 <!-- Swiper JS for slider functionality -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="blog.js"></script>
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('nav ul');
+        nav.classList.toggle('active');
+    }
+</script>
