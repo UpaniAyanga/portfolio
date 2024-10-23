@@ -1,27 +1,20 @@
+/* Global Styles */
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(to right, #f18abd, #ff98e2) !important;
+    background: linear-gradient(to right, #f18abd, #ff98e2) !important; /* linear gradient background */
 }
 
-h2 {
-    margin: 5%;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 100;
-}
-
-.container-timeline {
-    padding: 70px;
-}
+/* Sets up the timeline with flexbox, margin, and relative positioning */
 .timeline {
     display: flex;
     flex-direction: column;
     margin: 20px auto;
     position: relative;
 }
+
 .timeline-event {
     margin-bottom: 20px;
     position: relative;
@@ -88,11 +81,21 @@ h2 {
     font-size: 32px;
 }
 
-.timeline-event-description p {
+/* added negation pseudo class */
+p:not(.achievements) {
     margin-top: 10px;
     color: #898585;
     text-align: left;
 }
+.achievements {
+    font-weight: bold;
+    color: #898585;
+}
+.aws-link{
+    color: #898585;
+    text-align: left;
+}
+
 .timeline-event--type2:after {
     background: #555ac0;
 }
@@ -212,22 +215,21 @@ h2 {
     animation: fadeInUp 0.6s forwards ease-in-out;
 }
 
+/* Adds animation delay for each event. */
 .timeline-event:nth-child(1) {
     animation-delay: 0.2s;
 }
-
 .timeline-event:nth-child(2) {
     animation-delay: 0.4s;
 }
-
 .timeline-event-description:nth-child(3) {
     animation-delay: 0.6s;
 }
-
 .timeline-event:nth-child(4) {
     animation-delay: 0.8s;
 }
 
+/* Defines keyframes for fade-in-up animation. */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
