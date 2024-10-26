@@ -1,243 +1,264 @@
 /* Global Styles */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+ /* linear gradient background to body*/
 body {
-    background: linear-gradient(to right, #f18abd, #ff98e2) !important; /* linear gradient background */
+  background: linear-gradient(
+    to right,
+    #f18abd,
+    #ff98e2
+  ) !important;
 }
 
-/* Sets up the timeline with flexbox, margin, and relative positioning */
+/* Sets up the timeline container with flexbox, margin, and relative positioning */
 .timeline {
-    display: flex;
-    flex-direction: column;
-    margin: 20px auto;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  position: relative;
 }
 
+/* styling for each timeline event */
 .timeline-event {
-    margin-bottom: 20px;
-    position: relative;
-    display: flex;
-    margin: 20px 0;
-    border-radius: 6px;
-    align-self: center;
-    width: 50vw;
-    
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  border-radius: 6px;
+  align-self: center;
+  width: 700px;
 }
+
+/* this pseudo class is targeting every odd-numbered .timeline-event element */
 .timeline-event:nth-child(2n + 1) {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse; /* reverses the order of the flex items */
 }
 .timeline-event:nth-child(2n + 1) .timeline-event-date {
-    border-radius: 0 6px 6px 0;
+  border-radius: 0 6px 6px 0; /* adds rounded corners to the right side of the date element */
 }
 .timeline-event:nth-child(2n + 1) .timeline-event-content {
-    border-radius: 6px 0 0 6px;
+  border-radius: 6px 0 0 6px; /* adds rounded corners to the left side of the content element */
 }
+
 .timeline-event-title {
-    font-size: 1.2rem;
-    line-height: 1.4;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #9251ac;
-    letter-spacing: 1.5px;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #9251ac;
+  letter-spacing: 1.5px;
 }
+
+/*
+    Applies a box-shadow to an element, creating multiple layers of shadows with different offsets, blur radii, and colors.
+    - The first shadow is a large, soft shadow with a slight upward offset.
+    - The second shadow is a medium-sized shadow with a downward offset.
+    - The third shadow is a small, subtle shadow with a slight upward offset.
+*/
 .timeline-event-content {
-    padding: 20px;
-    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
-    background: #fff;
-    width: calc(40vw - 84px);
-    border-radius: 0 6px 6px 0;
+  padding: 20px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025); /* Applies a box-shadow to an element, creating multiple layers of shadows with different offsets, blur radii, and colors. */
+  background: #fff;
+  width: calc(40vw - 84px); /* calc() function dynamically adjusts the width of the element based on the size of the viewport, minus a fixed number of pixels */
+  border-radius: 0 6px 6px 0; /* adds rounded corners to the right side of the content element */
 }
 .timeline-event-date {
-    color: #f6a4ec;
-    font-size: 1.5rem;
-    font-weight: 600;
-    background: #9251ac;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    padding: 0 20px;
-    border-radius: 6px 0 0 6px;
+  color: #f6a4ec;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: #9251ac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  border-radius: 6px 0 0 6px;
 }
 .timeline-event-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #9251ac;
-    padding: 20px;
-    align-self: center;
-    margin: 0 20px;
-    background: #f6a4ec;
-    border-radius: 100%;
-    width: 40px;
-    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
-    padding: 40px;
-    height: 40px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9251ac;
+  padding: 20px;
+  align-self: center;
+  margin: 0 20px;
+  background: #f6a4ec;
+  border-radius: 100%;
+  width: 40px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  padding: 40px;
+  height: 40px;
+  position: relative;
 }
 .timeline-event-icon i {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 /* added negation pseudo class */
 p:not(.achievements) {
-    margin-top: 10px;
-    color: #898585;
-    text-align: left;
+  margin-top: 10px;
+  color: #898585;
+  text-align: left;
 }
 .achievements {
-    font-weight: bold;
-    color: #898585;
+  font-weight: bold;
+  color: #898585;
 }
-.aws-link{
-    color: #898585;
-    text-align: left;
+.aws-link {
+  color: #898585;
+  text-align: left;
 }
 
-.timeline-event--type2:after {
-    background: #555ac0;
-}
 .timeline-event--type2 .timeline-event-date {
-    color: #87bbfe;
-    background: #555ac0;
+  color: #87bbfe;
+  background: #555ac0;
 }
-.timeline-event--type2:nth-child(2n + 1) .timeline-event-icon:before, .timeline-event--type2:nth-child(2n + 1) .timeline-event-icon:after {
-    background: #87bbfe;
+.timeline-event--type2:nth-child(2n + 1) .timeline-event-icon:before,
+.timeline-event--type2:nth-child(2n + 1) .timeline-event-icon:after {
+  background: #87bbfe;
 }
 .timeline-event--type2 .timeline-event-icon {
-    background: #87bbfe;
-    color: #555ac0;
+  background: #87bbfe;
+  color: #555ac0;
 }
-.timeline-event--type2 .timeline-event-icon:before, .timeline-event--type2 .timeline-event-icon:after {
-    background: #87bbfe;
+.timeline-event--type2 .timeline-event-icon:before,
+.timeline-event--type2 .timeline-event-icon:after {
+  background: #87bbfe;
 }
 .timeline-event--type2 .timeline-event-title {
-    color: #555ac0;
+  color: #555ac0;
 }
 .timeline-event--type3:after {
-    background: #24b47e;
+  background: #24b47e;
 }
 .timeline-event--type3 .timeline-event-date {
-    color: #aff1b6;
-    background-color: #24b47e;
+  color: #aff1b6;
+  background-color: #24b47e;
 }
-.timeline-event--type3:nth-child(2n + 1) .timeline-event-icon:before, .timeline-event--type3:nth-child(2n + 1) .timeline-event-icon:after {
-    background: #aff1b6;
+.timeline-event--type3:nth-child(2n + 1) .timeline-event-icon:before,
+.timeline-event--type3:nth-child(2n + 1) .timeline-event-icon:after {
+  background: #aff1b6;
 }
 .timeline-event--type3 .timeline-event-icon {
-    background: #aff1b6;
-    color: #24b47e;
+  background: #aff1b6;
+  color: #24b47e;
 }
-.timeline-event--type3 .timeline-event-icon:before, .timeline-event--type3 .timeline-event-icon:after {
-    background: #aff1b6;
+.timeline-event--type3 .timeline-event-icon:before,
+.timeline-event--type3 .timeline-event-icon:after {
+  background: #aff1b6;
 }
 .timeline-event--type3 .timeline-event-title {
-    color: #24b47e;
+  color: #24b47e;
 }
 .timeline-event--type4:after {
-    background: #ffcc00;
+  background: #ffcc00;
 }
 .timeline-event--type4 .timeline-event-date {
-    color: #ffffff;
-    background-color: #ffcc00;
+  color: #ffffff;
+  background-color: #ffcc00;
 }
-.timeline-event--type4:nth-child(2n + 1) .timeline-event-icon:before, .timeline-event--type4:nth-child(2n + 1) .timeline-event-icon:after {
-    background: #ffcc00;
+.timeline-event--type4:nth-child(2n + 1) .timeline-event-icon:before,
+.timeline-event--type4:nth-child(2n + 1) .timeline-event-icon:after {
+  background: #ffcc00;
 }
 .timeline-event--type4 .timeline-event-icon {
-    background: #fae079;
-    color: #736c5e;
+  background: #fae079;
+  color: #736c5e;
 }
-.timeline-event--type4 .timeline-event-icon:before, .timeline-event--type4 .timeline-event-icon:after {
-    background: #ffcc00;
+.timeline-event--type4 .timeline-event-icon:before,
+.timeline-event--type4 .timeline-event-icon:after {
+  background: #ffcc00;
 }
 .timeline-event--type4 .timeline-event-title {
-    color: #ffcc00;
+  color: #ffcc00;
 }
 .timeline-event:last-child .timeline-event-icon:before {
-    content: none;
+  content: none;
 }
+
 @media (max-width: 786px) {
-    .timeline-event {
-        flex-direction: column;
-        align-self: center;
-   }
-    .timeline-event-content {
-        width: 100%;
-   }
-    .timeline-event-icon {
-        border-radius: 6px 6px 0 0;
-        width: 100%;
-        margin: 0;
-        box-shadow: none;
-   }
-    .timeline-event-icon:before, .timeline-event-icon:after {
-        display: none;
-   }
-    .timeline-event-date {
-        border-radius: 0;
-        padding: 20px;
-   }
-    .timeline-event:nth-child(2n + 1) {
-        flex-direction: column;
-        align-self: center;
-   }
-    .timeline-event:nth-child(2n + 1) .timeline-event-date {
-        border-radius: 0;
-        padding: 20px;
-   }
-    .timeline-event:nth-child(2n + 1) .timeline-event-icon {
-        border-radius: 6px 6px 0 0;
-        margin: 0;
-   }
+  .timeline-event {
+    flex-direction: column;
+    align-self: center;
+  }
+  .timeline-event-content {
+    width: 100%;
+  }
+  .timeline-event-icon {
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+  .timeline-event-icon:before,
+  .timeline-event-icon:after {
+    display: none;
+  }
+  .timeline-event-date {
+    border-radius: 0;
+    padding: 20px;
+  }
+  .timeline-event:nth-child(2n + 1) {
+    flex-direction: column;
+    align-self: center;
+  }
+  .timeline-event:nth-child(2n + 1) .timeline-event-date {
+    border-radius: 0;
+    padding: 20px;
+  }
+  .timeline-event:nth-child(2n + 1) .timeline-event-icon {
+    border-radius: 6px 6px 0 0;
+    margin: 0;
+  }
 }
 @keyframes fillLeft {
-    100% {
-        right: 100%;
-   }
+  100% {
+    right: 100%;
+  }
 }
 @keyframes fillTop {
-    100% {
-        top: 100%;
-   }
+  100% {
+    top: 100%;
+  }
 }
 @keyframes fillLeftOdd {
-    100% {
-        left: 100%;
-   }
+  100% {
+    left: 100%;
+  }
 }
 
 .timeline-event {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 0.6s forwards ease-in-out;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.6s forwards ease-in-out;
 }
 
 /* Adds animation delay for each event. */
 .timeline-event:nth-child(1) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .timeline-event:nth-child(2) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .timeline-event-description:nth-child(3) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .timeline-event:nth-child(4) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 /* Defines keyframes for fade-in-up animation. */
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
