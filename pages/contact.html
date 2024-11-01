@@ -4,72 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page title -->
     <title>Contact Me</title>
-    <link rel="stylesheet" href="../assets/css/contact.css">
+    <!-- link to the general stylesheet -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- link to the page specific stylesheet -->
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <!-- link to the Google Fonts stylesheet for the 'Raleway' font. -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <!-- link to the Font Awesome stylesheet for icons. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
+<!-- This HTML file contains a contact form within a container.  -->
 <body>
-   <!-- The header of the portfolio webpage -->
-   <header>
-    <div class="container">
-        <!-- Logo -->
-        <a href="../index.html" class="logo"> ๋࣭ ⭑ Upani ༘ ⋆₊ </a> 
-        <nav>
-            <ul>
-                <li><a href="../index.html" >About</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="blog.html">Blogs</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hamburger" onclick="toggleMenu()"> <!-- Hamburger Menu -->
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- The header of the portfolio webpage -->
+    <header>
+        <div class="container">
+            <!-- Logo -->
+            <a href="../index.html" class="logo"> ๋࣭ ⭑ Upani ༘ ⋆₊ </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()"> <!-- Hamburger Menu -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <!-- closing the header of the portfolio webpage -->
+    <!-- Main container for the contact form and image. -->
+    <div class="contact-container">
+        <!-- "mailto" action to send the form data via email.-->
+        <form action="mailto:upani.20223235@iit.ac.lk?subject=HI%20I%20WANT%20TO%20CONNECT%20WITH%20YOU" method="post"
+            enctype="text/plain" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Any inquiries?</h2>
+                <!-- Horizontal rule for separation -->
+                <hr>
+            </div>
+            <!-- Container for each input field. -->
+            <div class="input-container">
+                <!-- Input for user's name with validation. -->
+                <input type="text" name="name" placeholder="Enter your Name" class="contact-inputs" required
+                    minlength="2" maxlength="50">
+                <span class="icon"></span>
+            </div>
+            <!-- Container for each input field. -->
+            <div class="input-container">
+                <!-- Input for user's email with validation. -->
+                <input type="email" name="email" placeholder="Enter your Email" class="contact-inputs" required>
+                <span class="icon"></span>
+            </div>
+            <!-- Container for each input field. -->
+            <div class="input-container">
+                <!-- Text area for user's message with validation. -->
+                <textarea name="message" placeholder="Enter message" class="contact-inputs" required minlength="10"
+                    maxlength="500"></textarea>
+                <span class="icon"></span>
+            </div>
+            <!-- Submit button for the form. -->
+            <button type="submit">Submit</button>
+        </form>
+        <!-- Container for the image displayed next to the form. -->
+        <div class="contact-right">
+            <img src="../assets/images/form.png" alt="">
         </div>
     </div>
-</header>
-<!-- closing the header of the portfolio webpage -->
-<div class="contact-container">
-    <form action="mailto:upani.20223235@iit.ac.lk?subject=HI%20I%20WANT%20TO%20CONNECT%20WITH%20YOU" method="post" enctype="text/plain" class="contact-left">
-        <div class="contact-left-title">
-            <h2>Any inquiries?</h2>
-            <hr>
-        </div>
-        <input type="text" name="name" placeholder="Enter your Name" class="contact-inputs" required minlength="2" maxlength="50">
-        <input type="email" name="email" placeholder="Enter your Email" class="contact-inputs" required>
-        <textarea name="message" placeholder="Enter message" class="contact-inputs" required minlength="10" maxlength="500"></textarea>
-        <button type="submit">Submit</button>
-    </form>
-    <div class="contact-right">
-        <img src="../assets/images/form.png" alt="">
-    </div>
-</div>
 
     <!-- Footer Section Start-->
-<footer>
-    <div class="footer">
-        <div class="row">
-            <a href="https://www.facebook.com/profile.php?id=100014800905916"><i class="fab fa-facebook facebook"></i></a>
-            <a href="https://www.instagram.com/upani_l/"><i class="fab fa-instagram instagram"></i></a>
-            <a href="https://www.linkedin.com/in/upani-l/"><i class="fab fa-linkedin linkedin"></i></a>
-            <a href="https://www.pinterest.com/ulokusuriya/"><i class="fab fa-pinterest pinterest"></i></a>
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="https://www.facebook.com/profile.php?id=100014800905916"><i
+                        class="fab fa-facebook facebook"></i></a>
+                <a href="https://www.instagram.com/upani_l/"><i class="fab fa-instagram instagram"></i></a>
+                <a href="https://www.linkedin.com/in/upani-l/"><i class="fab fa-linkedin linkedin"></i></a>
+                <a href="https://www.pinterest.com/ulokusuriya/"><i class="fab fa-pinterest pinterest"></i></a>
+            </div>
+            <div class="row">
+                &copy; All rights reserved by Upani Lokusuriya
+            </div>
         </div>
-        <div class="row">
-            &copy; All rights reserved by Upani Lokusuriya 
-        </div>
-    </div>
-</footer>
-<!-- Footer Section End -->
+    </footer>
+    <!-- Footer Section End -->
 </body>
+
 </html>
 
+<!-- A javascript function to toggle the visibility of a navigation menu. -->
 <script>
     function toggleMenu() {
         const nav = document.querySelector('nav ul');
         nav.classList.toggle('active');
     }
 </script>
-

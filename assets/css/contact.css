@@ -5,27 +5,29 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Raleway', sans-serif;
-    background: linear-gradient(to right, #ffdad5, #ff98e2) !important;
+    font-family: 'Raleway', sans-serif; 
+    background: linear-gradient(to right, #ffdad5, #ff98e2) !important; /* overrides the default background color */
 }
 .contact-container{
-    height: 100vh;
+    height: 100vh; /* element will always span the full height of the browser window, regardless of the screen size. */
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: center; /* aligns the content vertically */
+    justify-content: space-evenly; /* to make sure that space between each flex item, as well as the space before the first item and after the last item, is equal */
 }
+/* contact form */
 .contact-left{
     display:flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
+    flex-direction: column; /* aligns the content vertically */
+    align-items: start; /* aligns the content to the start of the container */
+    gap: 20px; /* adds space between the child elements */
 }
 .contact-left-title h2{
     font-weight: 600;
     color: #a363aa;
     font-size: 40px;
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* adds space between the heading and the hr element */
 }
+/* styling of the hr element */
 .contact-left-title hr{
     border: none;
     width: 120px;
@@ -34,52 +36,83 @@ body{
     border-radius: 10px;
     margin-bottom: 20px;
 }
+/* styling of the input fields and the textarea */
 .contact-inputs{
     width: 400px;
     height: 50px;
-    border: none;
+    border: none; /* removes the default border */
     outline: none;
     padding-left: 25px;
-    font-weight: 500px;
-    color: #666;
+    font-weight: 500px; /* sets the font weight */
+    color: #666; /* sets the text color */
     border-radius: 50px;
 }
+/* styling of the textarea */
 .contact-left textarea{
     height: 140px;
     padding-top: 15px;
     border-radius: 20px;
 }
+
+/* When an element with class 'contact-input' is focused, its border changes to a 2px solid line with the color #a363aa. */
 .contact-inputs:focus{
     border: 2px solid #a363aa;
 }
+
+/* Changes the placeholder text color to specified color. */
 .contact-inputs::placeholder{
     color: #666;
 }
 .contact-left button{
     display: flex;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 30px; /* padding: Sets the padding for elements to 15px top/bottom and 30px left/right. */
     font-size: 16px;
     color: #fff;
     gap: 10px;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(#e675e0, #d981fc);
+    background: linear-gradient(#e675e0, #d981fc); /* Sets the background color of the button to a linear gradient. */
     cursor: pointer;
 }
 .contact-right img{
     width: 350px;
 }
 
+/* The selector input:valid applies styles to input fields that have passed validation checks */
+input:valid{
+    border: 2px solid green; /* Green border for valid input */
+}
+
 @media (max-width:800px){
     .contact-inputs {
-        width: 80vw;
+        width: 80vw; /* Sets the width of the input fields to 80% of the viewport width */
     }
     .contact-container{
-        padding-top: 75px;
+        padding-top: 75px; /* Adds space between the top of the container and the content */
     }
-
     .contact-right{
-        display: none;
+        display: none; /* Hides the image on smaller screens */
     }
+    .contact-left button{
+        align-self: center; /* Aligns the button to the center of the container */
+    }
+}
+
+.contact-left-title h2::after {
+    content: " ✉️"; /* Adds a letter emoji after the heading */
+}
+
+.contact-inputs::placeholder {
+    color: #aaa; /* Style the placeholder text */
+}
+
+.contact-inputs:valid + .icon::after {
+    content: "✔️"; /* Adds a checkmark after valid inputs */
+    color: green;
+    margin-left: 5px;
+}
+
+button::before {
+    content: "🚀 "; /* Adds a rocket emoji before the button text */
 }
