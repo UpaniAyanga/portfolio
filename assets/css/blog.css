@@ -23,7 +23,7 @@ body {
 /* Styles for the slide buttons in the slider. */
 .slider-wrap .swiper-slide-button {
   color: #fff;
-  margin-top: -50px;
+  margin-top: -50px; /* Moves the buttons up. */
 }
 
 /* Changes the text color to blue when hovered over */
@@ -35,15 +35,20 @@ body {
   color: #fff;
   width: 400px;
   padding: 35px;
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Makes the card a flex container. */
+  flex-direction: column; /* Aligns the content vertically. */
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Centers the content vertically and horizontally. */
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2); /* sets a semi-transparent white background. */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* sets a semi-transparent white background. */
   border: 1px solid rgba(255, 255, 255, 0.25); /* adds a semi-transparent white border.*/
 }
-
+/* styling of card image */
 .card-list .card .blog-image {
   width: 150px;
   height: 150px;
@@ -68,19 +73,24 @@ body {
 /* read more button styling */
 .card-list .card .read-more {
   font-size: 15px;
-  padding: 5px 10px; 
+  padding: 5px 10px;
   color: #620847;
   border-radius: 6px;
   font-weight: 700;
   background: #f9cff7;
   opacity: 0.5; /* Sets the opacity of the button. */
   border: 1px solid transparent;
-  transition: 0.3s ease;  /* Adds a transition effect for changes. */
+  transition: 0.3s ease; /* Adds a transition effect for changes. */
 }
 
 /* hover effect for the read more button */
 .card-list .card .read-more:hover {
-  background: rgba(255, 255, 255, 0.1); /* Sets a semi-transparent white background. */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Sets a semi-transparent white background. */
   border: 1px solid #fff;
   color: #fff;
 }
@@ -118,13 +128,16 @@ h2 {
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in; /* Adds a transition effect for changes. */
 }
 
+/* targets the element with the class 'modaloverlay' when it is the target of a URL fragment identifier.*/
+/* When the user clicks the "Read More" link, the URL fragment changes to #modal, 
+and the CSS rule .modaloverlay:target applies, making the modal visible and interactive */
 .modaloverlay:target {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
+  display: block; /* Makes the element visible. */
+  opacity: 1; /* Sets the element's opacity to fully opaque. */
+  pointer-events: auto; /* Allows the element to receive pointer events. */
 }
 
 .modal {
@@ -133,18 +146,18 @@ h2 {
   margin: 0 auto;
   padding: 3em;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS devices. */
 }
 
 /* close button */
 .close {
-  font-size: 28px;
-  color: #f9cff7;
+  font-size: 28px; 
+  color: #f9cff7; /* Sets the color of the close button. */
   text-decoration: none;
-  position: absolute;
+  position: absolute; 
   right: 20px;
   top: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; /* Sets the font family for the close button. */
 }
 
 /* Modal Image Styling */
@@ -160,25 +173,25 @@ h2 {
 
 /* Modal Headings */
 .modal h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; /* Sets the font family for the heading. */
   font-size: 28px;
   color: #ff69b4;
   text-align: center;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow to the text. */
   margin-bottom: 20px;
 }
 
 .modal h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; /* Sets the font family for the heading. */
   font-size: 22px;
   color: #ff1493;
   margin-bottom: 15px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Adds a shadow to the text. */
 }
 
 /* Modal Text Styling */
 .modal p {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", sans-serif; /* Sets the font family for the paragraph. */
   font-size: 18px;
   color: #333;
   line-height: 1.6;
@@ -190,12 +203,12 @@ h2 {
 }
 
 .modal ul {
-  list-style-type: none;
+  list-style-type: none; /* Removes the default list style. */
   padding: 0;
 }
 
 .modal ul li {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", sans-serif; /* Sets the font family for the list items. */
   font-size: 18px;
   color: #ff69b4;
   margin-bottom: 10px;
@@ -229,7 +242,7 @@ th {
 tr:nth-child(even) {
   background-color: #ffe6f2;
 }
-
+/* hover effect for table rows */
 tr:hover {
   background-color: #ffb3e6;
   transition: background-color 0.3s;
