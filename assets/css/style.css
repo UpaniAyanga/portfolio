@@ -2,19 +2,19 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* to ensure that padding and border widths are included in the element's total width and height*/
 }
 
 html {
-    font-size: 14px;
+    font-size: 14px; /* Base font size */
 }
 
 /* Body styling: setting the font, background, color, and centering content */
 body {
-    font-family: 'Raleway', sans-serif;
-    background: linear-gradient(to right, #fe94c8, #ff98e2);
+    font-family: 'Raleway', sans-serif; 
+    background: linear-gradient(to right, #fe94c8, #ff98e2); /* applies a linear gradient background where direction is set to move from left to right. */
     text-align: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Set the minimum height of the viewport */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -23,10 +23,10 @@ body {
 
 /* Basic styling */
 header {
-    position: absolute;
+    position: absolute;  
     top: 0;
-    width: 100%;
-    padding: 20px 0;
+    width: 100%; /* header stretches across the full width of the viewport */
+    padding: 20px 0; /* adjust top and bottom padding of 20px vertically*/
     background-color: #aa2e91; 
 }
 
@@ -52,10 +52,10 @@ header {
 
 /* Navigation styles */
 nav ul {
-    list-style: none;
-    display: flex;
+    list-style: none; /* Removed default list styles */
+    display: flex; /* Display the menu items in a row. flex aligns in a row by default */
     justify-content: center;
-    gap: 70px; 
+    gap: 70px; /* gap between the menu items */
     margin-top: 5px;
 }
 
@@ -64,21 +64,22 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    position: relative;
+    position: relative; /* Position relative to the parent element */
 }
 
+/* Hover effect */
+/* The ::after pseudo-element initially has a width of 0, making it invisible. When the user hovers over the anchor tag, the width transitions to 100% over 0.3 seconds, creating a smooth animation that makes the underline appear to grow from left to right */
+/* this pseudo element creates an underline effect that animates when the width changes */
 nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
     background-color: white;
-    bottom: -5px;
+    bottom: -5px; /* Position the underline 5px below the text */
     left: 0;
     transition: width 0.3s ease;
 }
-
-/* Hover effect */
 nav ul li a:hover::after {
     width: 100%;
 }
@@ -91,7 +92,7 @@ nav ul li a.active {
 /* Hamburger Menu */
 .hamburger {
     display: none;
-    flex-direction: column;
+    flex-direction: column; /* flex container to stack its child elements in a column direction. */
     cursor: pointer;
     gap: 5px;
 }
@@ -101,7 +102,7 @@ nav ul li a.active {
     height: 3px;
     background-color: white;
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Transition effect */
 }
 
 /* Responsive Styles */
@@ -115,16 +116,16 @@ nav ul li a.active {
     /* Hide the default horizontal menu and make the hamburger menu visible */
     nav ul {
         display: none; 
-        flex-direction: column;
-        position: absolute;
+        flex-direction: column; /* flex container to stack its child elements in a column direction. */
+        position: absolute; /* Position the menu absolutely */
         top: 65px;
         right: 20px;
         width: 200px;
         padding: 50px;
         border-radius: 10px;
         background-color: #e14cc3;
-        opacity: 0.9;
-        transition: all 0.3s ease; 
+        opacity: 0.9; /* Set the opacity to 0.9 to make it semi transparent*/
+        transition: all 0.3s ease; /* Transition effect */
         z-index: 1000; /* Higher z-index to stay on top of the content */
     }
 
@@ -165,23 +166,22 @@ h1 {
 
 /* Styling for the aspiring text */
 .aspiring {
-    font-size: 2rem; 
+    font-size: 30px; 
     color: white;
     margin: 20px 0; 
 }
 
 /* Button styling */
 .btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 30px;
-    border: 2px solid white;
-    border-radius: 30px;
-    text-decoration: none;
+    display: inline-block; /* makes the button an inline-level block container */
+    margin-top: 30px; 
+    padding: 10px 30px; /* adds 10px padding to the top and bottom, and 30px padding to the left and right */
+    border: 2px solid white; /* adds a 2px solid white border around the button */
+    border-radius: 30px; /* rounds the corners of the button with a radius of 30px */
+    text-decoration: none; /* removes any text decoration from the button */
     color: white;
     font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.3s; 
+    font-size: 15px; 
 }
 
 .btn:hover {
@@ -195,7 +195,7 @@ h1 {
     padding: 30px;
     margin: 0 auto; /* Center the hero */
     margin-top: 30px;
-    flex-wrap: wrap; /* Allow wrapping */
+    flex-wrap: wrap; /*Flex items will wrap onto multiple lines, from top to bottom. */
 }
 
 /* Profile Image */
@@ -223,26 +223,29 @@ h1 {
     text-shadow: #1e1a1c;
 }
 
+
 .fade-in:nth-child(1) {
-    animation-delay: 0s;
+    animation-delay: 0s; /* Applies a fade-in animation with no delay. */
 }
 
 .fade-in:nth-child(2) {
-    animation-delay: 2s;
+    animation-delay: 2s; /* Applies a fade-in animation with a 2-second delay. */
 }
 
 .fade-in:nth-child(3) {
-    animation-delay: 4s;
+    animation-delay: 4s; /* Applies a fade-in animation with a 4-second delay. */
 }
 
+/* Keyframes for the fade-in animation */
 @keyframes fadeInOut {
-    0% { opacity: 0; }
-    10% { opacity: 1; }
-    30% { opacity: 1; }
-    40% { opacity: 0; }
-    100% { opacity: 0; }
+    0% { opacity: 0; } /* Element is fully transparent. */
+    10% { opacity: 1; } /* Element fades in to full opacity. */
+    30% { opacity: 1; } /* Element remains fully opaque. */
+    40% { opacity: 0; } /* Element starts fading out. */
+    100% { opacity: 0; } /* Element is fully transparent again. */
 }
 
+/* Responsive Styles */
 @media (max-width: 720px) {
     .hero {
         flex-direction: column;
@@ -289,7 +292,7 @@ h1 {
 
 .footer .row a {
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.5s; /* Transition effect */
 }
 
 .footer .row a:hover {
@@ -307,9 +310,10 @@ h1 {
 
 .footer .row a i {
     font-size: 2em;
-    margin: 0% 1%;
+    margin: 0% 1%; /* creates a small horizontal space on both sides of the element */
 }
 
+/* Responsive Styles of footer*/
 @media (max-width: 720px) {
     .footer {
         text-align: center;
@@ -321,7 +325,7 @@ h1 {
         text-align: left;
     }
     .footer .row a i {
-        margin: 0% 3%;
+        margin: 0% 3%; /* creates a small horizontal space on both sides of the element */
     }
 }
 
