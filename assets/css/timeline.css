@@ -113,6 +113,7 @@ p:not(.achievements) {
   text-align: left;
 }
 
+/* The ::before and ::after pseudo-elements are used to add background colors to the icons within the timeline events. */
 .timeline-event--type2 .timeline-event-date {
   color: #87bbfe;
   background: #555ac0;
@@ -176,10 +177,12 @@ p:not(.achievements) {
 .timeline-event--type4 .timeline-event-title {
   color: #ffcc00;
 }
+/* removing any content that might have been added */
 .timeline-event:last-child .timeline-event-icon:before {
   content: none;
 }
 
+/* media queries for responsive design */
 @media (max-width: 786px) {
   .timeline-event {
     flex-direction: column;
@@ -217,26 +220,33 @@ p:not(.achievements) {
     margin: 0;
   }
 }
+
+/* targets the right property of the pseudo-element to 100% at the end of the animation. element will move completely to the left, 
+    as its right edge aligns with the left edge of its containing block */
 @keyframes fillLeft {
   100% {
-    right: 100%;
+    right: 100%; 
   }
 }
+/* targets the top property of the pseudo-element to 100% at the end of the animation. element will move completely downwards,
+    as its top edge aligns with the bottom edge of its containing block. */
 @keyframes fillTop {
   100% {
-    top: 100%;
+    top: 100%; 
   }
 }
+/* targets the left property of the pseudo-element to 100% at the end of the animation. element will move completely to the ight, 
+    as its left edge aligns with the right edge of its containing block. */
 @keyframes fillLeftOdd {
   100% {
-    left: 100%;
+    left: 100%; 
   }
 }
 
 .timeline-event {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fadeInUp 0.6s forwards ease-in-out;
+  opacity: 0; /* initially sets full transparency to the timeline event */
+  transform: translateY(50px);  /*  moves the element 50 pixels down from its original position along the Y-axis, as a part of animation effect */
+  animation: fadeInUp 0.6s forwards ease-in-out; /*  applies the fadeInUp animation to the timeline event */
 }
 
 /* Adds animation delay for each event. */
